@@ -8,9 +8,9 @@ import (
 )
 
 var rootCmd = &cobra.Command {
-	Use:	"web-cli",
-	Short:	"Read Atom feeds",
-	Long: 	"Just a small Cli application. Read Atom feeds",
+	Use:	"golang",
+	Short:	"Different commands to learn go",
+	Long: 	"Different commands to learn go",
 }
 
 var cmdLs = &cobra.Command{
@@ -18,7 +18,7 @@ var cmdLs = &cobra.Command{
 	Short: "List articles",
 	Long:  `Show the first 5 articles from heise.de`,
 	Run: func(cmd *cobra.Command, args []string) {
-		list()
+		webcli.List()
 	},
 }
 
@@ -29,7 +29,7 @@ var cmdDescribe = &cobra.Command{
 	Long:  `Show details for an article`,
 	Args:  cobra.MinimumNArgs(1),
 	Run: func(cmd *cobra.Command, args []string) {
-		describe(args[0])
+		webcli.Describe(args[0])
 	},
 }
 
