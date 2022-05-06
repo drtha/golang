@@ -5,7 +5,7 @@ import (
 	"github.com/mmcdole/gofeed"
 )
 
-func list() {
+func List() {
 	fp := gofeed.NewParser()
 	feed, _ := fp.ParseURL("https://www.heise.de/rss/heise-atom.xml")
 
